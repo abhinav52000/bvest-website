@@ -86,7 +86,7 @@
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
-  padding: 5px 2; /* Remove horizontal padding */
+  padding: 5px 10px; /* Remove horizontal padding */
   color: #fff;
   position: relative;
   line-height: 50px;
