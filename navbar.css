@@ -64,9 +64,6 @@
   width: 40%;
   text-align: center;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .nav-container-2 a {
@@ -77,9 +74,12 @@
   font-family: "Laila", sans-serif;
   font-size: 3rem;
   color: aliceblue;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+@media (max-width: 920px) {
+  .nav-container-2 p {
+    font-size: 2rem;
+  }
 }
 
 /*container 3*/
