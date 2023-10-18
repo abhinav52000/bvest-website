@@ -72,14 +72,11 @@
 
 .nav-container-2 p {
   font-family: "Laila", sans-serif;
-  font-size: 3rem;
+  font-size: 1.6rem;
   color: aliceblue;
-}
-
-@media (max-width: 920px) {
-  .nav-container-2 p {
-    font-size: 2rem;
-  }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*container 3*/
