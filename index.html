@@ -33,14 +33,6 @@
     <link
       rel="stylesheet"
       href="./footer.css" />
-    <!--link for css file-->
-    <link
-      rel="icon"
-      href="../images/reg_ico.png" />
-    <script
-      src="https://kit.fontawesome.com/0b62b37b15.js"
-      crossorigin="anonymous"></script>
-    <!-- link for social media logo -->
     <script
       src="https://kit.fontawesome.com/0b62b37b15.js"
       crossorigin="anonymous"></script>
@@ -96,6 +88,8 @@
     <!--Homepage-->
     <div class="banner">
       <div class="content1">
+        <div style="height: 450px"></div>
+
         <img
           src="./images/prajwalan.jpg"
           class="logo" />
@@ -105,11 +99,67 @@
           >
           <br />
         </p>
-        <div>
+        <!-- <div>
           <a href="reg.html">
             <button type="button"><span></span> REGISTER NOW</button>
           </a>
-        </div>
+        </div> -->
+        <div style="height: 50px"></div>
+
+        <section class="sponsors-slider">
+          <h2>Previous Sponsors</h2>
+          <div style="height: 50px"></div>
+
+          <div class="slider-container">
+            <!-- Add sponsor items here -->
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\xyzlogo.png"
+                alt="Sponsor 1" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\appwarslogo.png"
+                alt="Sponsor 2" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\axureslogo.png"
+                alt="Sponsor 3" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\interviewbuddylogo.webp"
+                alt="Sponsor 4" />
+            </div>
+            <!-- Add more sponsor items as needed -->
+          </div>
+          <div style="height: 50px"></div>
+          <div class="slider-container">
+            <!-- Add sponsor items here -->
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\nagarologo.png"
+                alt="Sponsor 5" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\appwarslogo.png"
+                alt="Sponsor 2" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\axureslogo.png"
+                alt="Sponsor 3" />
+            </div>
+            <div class="sponsor-item">
+              <img
+                src="images\sponsors\interviewbuddylogo.webp"
+                alt="Sponsor 4" />
+            </div>
+            <!-- Add more sponsor items as needed -->
+          </div>
+        </section>
       </div>
     </div>
 
@@ -171,5 +221,38 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Initialize the slider using JavaScript (optional)
+      document.addEventListener("DOMContentLoaded", function () {
+        const sliderContainer = document.querySelector(".slider-container");
+        let isMouseDown = false;
+        let startX;
+
+        sliderContainer.addEventListener("mousedown", (e) => {
+          isMouseDown = true;
+          startX = e.pageX - sliderContainer.offsetLeft;
+        });
+
+        sliderContainer.addEventListener("mouseup", () => {
+          isMouseDown = false;
+        });
+
+        sliderContainer.addEventListener("mousemove", (e) => {
+          if (!isMouseDown) return;
+          e.preventDefault();
+          const x = e.pageX - sliderContainer.offsetLeft;
+          const walk = (x - startX) * 2;
+          sliderContainer.scrollLeft -= walk;
+        });
+
+        // Add click event to each sponsor logo
+        const sponsorLogos = document.querySelectorAll(".sponsor-item img");
+        sponsorLogos.forEach((logo) => {
+          logo.addEventListener("click", () => {
+            window.location.href = "https://example.com"; // Replace with the sponsor's link
+          });
+        });
+      });
+    </script>
   </body>
 </html>
